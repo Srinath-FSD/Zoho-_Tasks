@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Very Simple Webpage</title>
+</head>
+<body>
+  <h2>JS TASK</h2>
+ 
+
+  <script>
+    // VARIABLES
+    let name = "Sri";
+    console.log(name);
+
+    // DATA TYPES
+    let num = 10;
+    console.log(num);
+
+    // OBJECT
+    let person = { name: "Sri", age: 20 };
+    console.log(person);
+
+    // FUNCTION
+    function hi() { console.log("Hello"); }
+    hi();
+
+    // ARROW FUNCTION
+    let add = (a,b) =>{
+            return a+b;
+    } 
+    console.log(add(2,3));
+
+
+    // TRUTHY/FALSY
+    console.log("sri" ? "True" : "False");
+
+    // SCOPE
+    function test(){ let a = "hiii"; console.log(a); }
+    test();
+
+    // CLOSURE
+    function outer(){
+      let i = 0;
+      return function(){ i++; console.log(i); }
+    }
+    let f = outer();
+    f(); f(); f();
+
+    // CALLBACK
+    function run(call){ call(); }
+    run(() => console.log("Hi This is Call Back"));
+
+    // ARRAY METHODS
+    let arr = [1, 2, 3];
+
+let mapped = arr.map(function(a){
+    return a * 2;
+});
+console.log("Map Result:", mapped);
+
+let filtered = arr.filter(function(a){
+    return a > 1;
+});
+console.log("Filter Result:", filtered);
+
+
+let reduced = arr.reduce(function(a, b){
+    return a + b;
+}, 10);
+console.log("Reduce Result:", reduced);
+
+  </script>
+</body>
+</html>
